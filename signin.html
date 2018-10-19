@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  	<head>
+      <title>Sign in</title>		
+
+      	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+		<link rel="stylesheet"
+		  	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		  	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+		  	crossorigin="anonymous">
+          
+		<link rel="stylesheet"
+				href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+				integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+				crossorigin="anonymous">
+        
+		<script	src="https://code.jquery.com/jquery-3.2.1.min.js"
+				integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+				crossorigin="anonymous"></script>
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+				integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+				crossorigin="anonymous"></script>
+        
+        <style>
+            .fullWidth {
+                width: 100%;
+            }
+            .lav {
+                background-color: lavender; 
+            }
+            .lavBlush {
+                background-color: lavenderblush;
+            }
+            body{
+                position: relative; 
+            }
+            .space {
+                margin-top: 50px; 
+            }
+        </style>
+        
+ 
+ 		<!-- angular cdn -->
+    	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    
+    	<!-- To make the controller separated from the view, make it external -->
+    	<script src="js/student.js"></script>
+        
+        <link rel="stylesheet" href="css/student.css">
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/signin.css" rel="stylesheet">
+  </head>
+
+  <body class="text-center">
+    <form class="form-signin">
+      
+      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2018</p>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+/* Created by Wenbin at the University of Missouri */
+.done-true {
+  	text-decoration: line-through;
+  	color: grey;
+}
+
+.red {
+    color: red;
+}
+
+form input.ng-invalid:not(.ng-pristine) {
+    box-shadow: 0px 0px 13px rgba(255, 133, 0, 0.9);
+}
+.error-message {
+    padding: 12px;
+    background-color: rgba(255, 133, 0, 0.1);
+    font-weight: bold;
+}

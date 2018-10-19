@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+      <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+    <!--navigation bar-->
+  <nav class="cyan lighten-2" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">CS4830 Exploration#3</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="about.html">Wenbin Guo</a></li>
+        <li><a href="contact.html">Contact</a></li>  
+        <li><a href="reminder.html">Notification</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li> 
+        <li><a href="signin.html">Sign in</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="about.html">Wenbin Guo</a></li>
+        <li><a href="contact.html">Contact</a></li>  
+        <li><a href="reminder.html">Notification</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li> 
+        <li><a href="signin.html">Sign in</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+<body>
+
+<script>
+var app = angular.module("reminder", []); 
+app.controller("myCtrl", function($scope) {
+    $scope.products = ["Buy a football ticket", "Play golf", "Hold a meeting at 3pm 9/26/2018"];
+    $scope.addItem = function () {
+        $scope.errortext = "";
+        if (!$scope.addMe) {return;}
+        if ($scope.products.indexOf($scope.addMe) == -1) {
+            $scope.products.push($scope.addMe);
+        } else {
+            $scope.errortext = "The item is already in your reminder.";
+        }
+        $scope.addMe = null;
+    }
+    $scope.removeItem = function (x) {
+        $scope.errortext = "";    
+        $scope.products.splice(x, 1);
+    }
+});
+</script>
+
+    <div class="container">
+        <div ng-app="reminder" ng-cloak ng-controller="myCtrl" class="w3-card-2 w3-margin" style="max-width:400px;">
+          <header class="w3-container w3-light-grey w3-padding-16">
+            <h5>My Reminders</h5>
+          </header>
+          <ul class="w3-ul">
+            <li ng-repeat="x in products" class="w3-padding-16">{{x}}<span ng-click="removeItem($index)" style="cursor:pointer;" class="w3-right w3-margin-right">Delete</span></li>
+          </ul>
+          <div class="w3-container w3-light-grey w3-padding-16">
+            <div class="w3-row w3-margin-top">
+              <div class="w3-col s10">
+                <input placeholder="Add your reminder here" ng-model="addMe" class="w3-input w3-border w3-padding">
+              </div>
+              <div class="w3-col s6">
+                <button ng-click="addItem()" class="w3-btn w3-padding w3-cyan">Add</button>
+              </div>
+            </div>
+            <p class="w3-text-red">{{errortext}}</p>
+          </div>
+        </div>
+    </div>
+</body>
+</html>
